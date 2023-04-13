@@ -1,0 +1,3 @@
+[submodule "Xcode/Config"]
+	path = Xcode/Config
+	url = https://github.com/ivorost/BlackConfig.git
