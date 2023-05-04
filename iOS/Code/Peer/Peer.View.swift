@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+final class Peer {}
+
 extension Peer {
     struct View: SwiftUI.View {
         var body: some SwiftUI.View {
@@ -46,7 +48,7 @@ struct GrowingCircleIndicatorView: View {
             .onAppear {
                 scale = 0
                 opacity = 1
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                DispatchQueue.main.async {
                     withAnimation(animation) {
                         scale = 1
                         opacity = 0

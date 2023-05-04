@@ -7,19 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8201F9A12945DE390059B5DB /* Media.Get.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8201F9A02945DE390059B5DB /* Media.Get.ViewModel.swift */; };
 		8205B89528A52F4100F1744A /* Main.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8205B89428A52F4100F1744A /* Main.ViewModel.swift */; };
 		8256C58E289D3D6000A527A6 /* Main.Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8256C58D289D3D6000A527A6 /* Main.Scene.swift */; };
-		8267EF432812B1DD008858C1 /* Peer.Selector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8267EF422812B1DD008858C1 /* Peer.Selector.swift */; };
 		828CA21F258B4D2900247034 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 828CA21E258B4D2900247034 /* Assets.xcassets */; };
 		828CA222258B4D2900247034 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 828CA220258B4D2900247034 /* LaunchScreen.storyboard */; };
-		829BF8582915489B002E389C /* Media.Put.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BF8572915489B002E389C /* Media.Put.ViewModel.swift */; };
 		829BF85A291548B5002E389C /* Media.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BF859291548B5002E389C /* Media.View.swift */; };
-		829BF85C291548FB002E389C /* Media.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829BF85B291548FB002E389C /* Media.ViewModel.swift */; };
-		82BB35EF29E84A20008671BF /* BlackUtils in Frameworks */ = {isa = PBXBuildFile; productRef = 82BB35EE29E84A20008671BF /* BlackUtils */; };
+		82B41A3D29E8AF94004E22B2 /* Media.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B41A3C29E8AF94004E22B2 /* Media.ViewModel.swift */; };
 		82BB35FB29E86065008671BF /* BlackMedia in Frameworks */ = {isa = PBXBuildFile; productRef = 82BB35FA29E86065008671BF /* BlackMedia */; };
 		82BB35FD29E863D6008671BF /* Peer.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BB35FC29E863D6008671BF /* Peer.View.swift */; };
-		82BC33BF281C1A67007AFD89 /* Peer.IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82BC33BE281C1A67007AFD89 /* Peer.IO.swift */; };
 		82CD942929E5C27300D67C3F /* Utility.Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CD942829E5C27300D67C3F /* Utility.Environment.swift */; };
 		82D9AB5F29E020FC00B9C925 /* Main.Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9AB5E29E020FC00B9C925 /* Main.Router.swift */; };
 		82D9AB6529E0A97800B9C925 /* Utility.Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9AB6429E0A97800B9C925 /* Utility.Color.swift */; };
@@ -48,19 +43,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8201F9A02945DE390059B5DB /* Media.Get.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.Get.ViewModel.swift; sourceTree = "<group>"; };
 		8205B89428A52F4100F1744A /* Main.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.ViewModel.swift; sourceTree = "<group>"; };
 		822A5DFE256C497F00AAF2C0 /* ApplicationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ApplicationServices.framework; path = System/Library/Frameworks/ApplicationServices.framework; sourceTree = SDKROOT; };
 		8256C58D289D3D6000A527A6 /* Main.Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.Scene.swift; sourceTree = "<group>"; };
-		8267EF422812B1DD008858C1 /* Peer.Selector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peer.Selector.swift; sourceTree = "<group>"; };
 		828CA213258B4D1F00247034 /* CameraIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		828CA21E258B4D2900247034 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		828CA221258B4D2900247034 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		829BF8572915489B002E389C /* Media.Put.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.Put.ViewModel.swift; sourceTree = "<group>"; };
 		829BF859291548B5002E389C /* Media.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.View.swift; sourceTree = "<group>"; };
-		829BF85B291548FB002E389C /* Media.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.ViewModel.swift; sourceTree = "<group>"; };
+		82B41A3C29E8AF94004E22B2 /* Media.ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.ViewModel.swift; sourceTree = "<group>"; };
 		82BB35FC29E863D6008671BF /* Peer.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peer.View.swift; sourceTree = "<group>"; };
-		82BC33BE281C1A67007AFD89 /* Peer.IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peer.IO.swift; sourceTree = "<group>"; };
 		82CD942829E5C27300D67C3F /* Utility.Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.Environment.swift; sourceTree = "<group>"; };
 		82CEC96125D2F5B9000302A0 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		82CEC96625D2F5CD000302A0 /* Application.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Application.entitlements; sourceTree = "<group>"; };
@@ -77,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82BB35EF29E84A20008671BF /* BlackUtils in Frameworks */,
 				82BB35FB29E86065008671BF /* BlackMedia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,9 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				829BF859291548B5002E389C /* Media.View.swift */,
-				829BF85B291548FB002E389C /* Media.ViewModel.swift */,
-				829BF8572915489B002E389C /* Media.Put.ViewModel.swift */,
-				8201F9A02945DE390059B5DB /* Media.Get.ViewModel.swift */,
+				82B41A3C29E8AF94004E22B2 /* Media.ViewModel.swift */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -187,8 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				82BB35FC29E863D6008671BF /* Peer.View.swift */,
-				82BC33BE281C1A67007AFD89 /* Peer.IO.swift */,
-				8267EF422812B1DD008858C1 /* Peer.Selector.swift */,
 			);
 			path = Peer;
 			sourceTree = "<group>";
@@ -222,7 +208,6 @@
 			);
 			name = Camera;
 			packageProductDependencies = (
-				82BB35EE29E84A20008671BF /* BlackUtils */,
 				82BB35FA29E86065008671BF /* BlackMedia */,
 			);
 			productName = CaptureIOS;
@@ -282,15 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8267EF432812B1DD008858C1 /* Peer.Selector.swift in Sources */,
-				8201F9A12945DE390059B5DB /* Media.Get.ViewModel.swift in Sources */,
 				8205B89528A52F4100F1744A /* Main.ViewModel.swift in Sources */,
-				82BC33BF281C1A67007AFD89 /* Peer.IO.swift in Sources */,
 				829BF85A291548B5002E389C /* Media.View.swift in Sources */,
+				82B41A3D29E8AF94004E22B2 /* Media.ViewModel.swift in Sources */,
 				8256C58E289D3D6000A527A6 /* Main.Scene.swift in Sources */,
-				829BF85C291548FB002E389C /* Media.ViewModel.swift in Sources */,
 				82BB35FD29E863D6008671BF /* Peer.View.swift in Sources */,
-				829BF8582915489B002E389C /* Media.Put.ViewModel.swift in Sources */,
 				82CD942929E5C27300D67C3F /* Utility.Environment.swift in Sources */,
 				82D9AB5F29E020FC00B9C925 /* Main.Router.swift in Sources */,
 				82D9AB6529E0A97800B9C925 /* Utility.Color.swift in Sources */,
@@ -405,10 +386,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		82BB35EE29E84A20008671BF /* BlackUtils */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = BlackUtils;
-		};
 		82BB35F729E85FC8008671BF /* BlackMedia */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BlackMedia;

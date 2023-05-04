@@ -7,22 +7,31 @@
 //
 
 import AVFoundation
+import Combine
 import BlackUtils
 import BlackMedia
 
 struct Media {}
+extension Media { struct Put {} }
+extension Media { struct Get {} }
 
 extension Media {
     class ViewModel : ObservableObject {
+        @Published var peer: Network.Peer.Proto?
+        fileprivate let peerPublisher: Network.Peer.OptionalValuePublisher
         private var session: Session.Proto?
-        
+
+        init(_ peer: Network.Peer.OptionalValuePublisher = Just<Network.Peer.Proto?>(nil).eraseToAnyValuePublisher()) {
+            self.peerPublisher = peer
+            peer.assign(to: &self.$peer)
+        }
+
         func start(layer: SampleBufferDisplayLayer) {
             BlackMedia.Capture.queue.async {
-                let setup = self.setup(layer: layer)
-                let session = setup.setup()
+                let session = self.setup(layer: layer)
 
                 do {
-                    try session?.start()
+                    try session.start()
                     self.session = session
                 }
                 catch {
@@ -37,8 +46,28 @@ extension Media {
             }
         }
         
-        func setup(layer: SampleBufferDisplayLayer) -> Video.Setup.Proto {
-            return Video.Setup.shared
+        func setup(layer: SampleBufferDisplayLayer) -> Session.Proto {
+            return Session.shared
+        }
+    }
+}
+
+extension Media.Put {
+    class ViewModel : Media.ViewModel {
+        override func setup(layer: SampleBufferDisplayLayer) -> Session.Proto {
+            let peer = Capture.Peer(peerPublisher)
+            let media = Video.streamCamera(to: peer, preview: layer)
+            return broadcast([ peer, media ])
+        }
+    }
+}
+
+extension Media.Get {
+    class ViewModel : Media.ViewModel {
+        override func setup(layer: SampleBufferDisplayLayer) -> Session.Proto {
+            let peer = Capture.Peer(peerPublisher)
+            let media = Video.display(from: peer, to: layer)
+            return broadcast([ peer, media ])
         }
     }
 }

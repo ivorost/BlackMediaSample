@@ -7,8 +7,10 @@
 //
 
 import SwiftUI
+import AVFoundation
 import Combine
 import BlackMedia
+import BlackUtils
 
 struct Main {}
 
@@ -17,23 +19,12 @@ extension Main {
     struct Scene: App {
         @ObservedObject private var vm: ViewModel
         @ObservedObject private var router: Router.General
-        let peerCancellable: AnyCancellable
 
         init() {
             let vm = ViewModel()
+
             self.vm = vm
-
-            let router = Router.General(selector: vm.peerSelector)
-            self.router = router
-
-            peerCancellable = vm.peerSelector.peerPublisher.sink { peer in
-                if let peer, peer.id != "" {
-                    router.navigate(to: .capture)
-                }
-                else {
-                    router.navigate(to: .pair)
-                }
-            }
+            self.router = Router.General(vm.$peer.eraseToAnyValuePublisher())
 
             Task {
                 try! await vm.start()
@@ -51,6 +42,23 @@ extension Main {
                 }
                 .ignoresSafeArea()
                 .environmentObject(router)
+                .onReceive(vm.$peer) { peer in
+                    navigate(with: peer)
+                }
+            }
+        }
+
+        private func navigate(with peer: (any Network.Peer.Proto)?) {
+            guard let peer else {
+                router.navigate(to: .pair)
+                return
+            }
+
+            if peer.id.name > Network.Peer.Identity.local.name {
+                router.navigate(to: .capture)
+            }
+            else {
+                router.navigate(to: .display)
             }
         }
     }

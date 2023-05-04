@@ -8,6 +8,7 @@
 
 import SwiftUI
 import BlackUtils
+import BlackMedia
 
 extension Main {
     final class Router {}
@@ -29,13 +30,12 @@ extension Main.Router {
 
 extension Main.Router {
     class General: Proto {
-        let selector: Peer.Selector.AnyProto
         @Published var route: Route = .pair
         var routePublisher: Published<Route>.Publisher { $route }
-        private var animateAppearance = false
+        var peer: Network.Peer.OptionalValuePublisher
 
-        init(selector: Peer.Selector.AnyProto) {
-            self.selector = selector
+        init(_ peer: Network.Peer.OptionalValuePublisher) {
+            self.peer = peer
         }
 
         var view: some View {
@@ -43,14 +43,13 @@ extension Main.Router {
             case .pair:
                 Peer.View()
             case .capture:
-                Media.View(vm: Media.Put.ViewModel(selector))
+                Media.View(vm: Media.Put.ViewModel(peer), title: "Streaming to")
             case .display:
-                Media.View(vm: Media.Get.ViewModel(selector))
+                Media.View(vm: Media.Get.ViewModel(peer), title: "Receiving from")
             }
         }
 
         func navigate(to route: Route) {
-            animateAppearance = true
             self.route = route
         }
     }
